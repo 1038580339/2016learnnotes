@@ -16,7 +16,7 @@
             document.body.appendChild(dot[i]);
 
         }
-     console.log(parseInt(dot[1].style.top));
+     console.log(parseInt(dot[1].style.top)+Math.random());
 
     function moveDot(num) {
          id[num] = setInterval(function () {
@@ -29,7 +29,7 @@
                  }
              }
              else if(parseInt(dot[num].style.left)<=50&&parseInt(dot[num].style.top)>=50){
-                 dot[num].style.top = parseInt(dot[num].style.top) -Math.random() + "%";
+                 dot[num].style.top = parseInt(dot[num].style.top) -Math.random()*2 + "%";
                  dot[num].style.left = parseInt(dot[num].style.left)-Math.random() + "%";
                  if (parseInt(dot[num].style.top) <0 || parseInt(dot[num].style.left) <= 0) {
                      clearInterval(id[num]);
@@ -49,7 +49,7 @@
 
              }
              else {
-                 dot[num].style.top = parseInt(dot[num].style.top) -Math.random() + "%";
+                 dot[num].style.top =parseInt(dot[num].style.top) -Math.random() + "%";
                  dot[num].style.left = parseInt(dot[num].style.left)-Math.random() + "%";
                  if (parseInt(dot[num].style.top) <=0 || parseInt(dot[num].style.left) <= 0) {
                      clearInterval(id[num]);
