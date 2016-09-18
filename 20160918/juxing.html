@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="mycanvas" width="200" height="200">
+
+</canvas>
+</body>
+<script>
+    var mycanvas=document.getElementById("mycanvas");
+    var otx=mycanvas.getContext("2d");
+    otx.beginPath();
+    otx.moveTo(0,0);
+    otx.lineTo(0,200);
+    otx.strokeStyle="black";
+    otx.stroke();
+    otx.closePath();
+    otx.beginPath();
+    otx.moveTo(200,0);
+    otx.lineTo(200,550);
+    otx.strokeStyle="black";
+    otx.stroke();
+    otx.closePath();
+    var height=0;
+    var num=200;
+    for(var i=0;i<11;i++){
+        otx.beginPath();
+        otx.moveTo(0,height);
+        otx.lineTo(200,height);
+        otx.strokeStyle="black";
+        otx.stroke();
+        otx.font="10px 宋体";
+        otx.fillText(200-(i)*20,0,height);
+        otx.closePath();
+//        otx.fillText=num;
+        height+=20;
+        num-=20;
+    }
+    var high=0;
+    var a=0;
+    var arr=[60,90,150,130,170,190,125,175,155,165,155,145];
+//    for(var i=0;i<12;i++){
+////        otx.moveTo(0,200);
+////        otx.lineTo(20,200);
+////        otx.lineTo(0,0);
+////        otx.lineTo(0,20);
+////        otx.font="20px 宋体";
+////        otx.fillStyle="black";
+////        otx.fillText("1",20,20)
+//        var speed=200-arr[i];
+//        var time= setInterval(function () {
+//            if (high >= 200 - arr[i]) {
+//                clearInterval(time);
+//                high = 0;
+//            }
+//            otx.save();
+//            otx.beginPath();
+//            high += speed/100;
+//            a+=arr[i]/100;
+//            otx.fillStyle = "blue";
+//            otx.fillRect(20 * i + 10,200-high,10,a);
+//            otx.closePath();
+//            otx.restore();
+//        }, 10);
+//    }
+
+    otx.beginPath();
+//    setInterval(function () {
+//        i++;
+//        otx.fillStyle="blue";
+//        otx.fillRect(20,20+i,10,10)
+//    },10)
+    function animate(i,height) {
+        var t=0;
+        var id=setInterval(function () {
+            if(t>=height){
+                clearInterval(id);
+            }
+            t+=height/100;
+            otx.fillStyle="blue";
+            otx.fillRect(20*i+10,200-t,10,t);
+        },10)
+    };
+    for( var i=0;i<arr.length;i++) {
+        animate(i,arr[i]);
+    }
+
+
+
+
+
+
+</script>
+</html>
