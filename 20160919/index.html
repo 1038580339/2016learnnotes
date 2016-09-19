@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas width="450" height="600" style="background-color: #22aadd" id="canvas"></canvas>
+</body>
+<script>
+    var canvas=document.getElementById("canvas");
+    var otx=canvas.getContext("2d");
+    var left_width=Math.random()*200;
+    otx.beginPath();
+    otx.fillStyle="black";
+    otx.fillRect(0,300,left_width,300);
+    otx.closePath();
+    function creatJu() {
+        otx.beginPath();
+        otx.fillStyle="black";
+        otx.fillRect(Math.random()*450,300,Math.random()*200,300);
+    }
+   creatJu();
+//   function jishi() {
+//       var id=setInterval(function () {
+//           height-=1;
+//           if(height<=0){
+//               clearInterval(id);
+//           }
+//
+////               console.log(height);
+//           otx.beginPath();
+//           otx.moveTo(left_width,300);
+//           otx.lineTo(left_width,height);
+//           otx.stroke();
+//       })
+//   }
+
+   document.onkeydown=function () {
+       if(event.keyCode==32){
+           var height=300;
+           id=setInterval(function () {
+               height-=1;
+               if(height<=0){
+                   clearInterval(id);
+               }
+
+//               console.log(height);
+               otx.beginPath();
+               otx.moveTo(left_width,300);
+               otx.lineTo(left_width,height);
+               otx.stroke();
+
+           },10)
+
+       }
+       return id;
+   };
+    document.onkeyup=function () {
+        if(event.keyCode==32){
+           clearInterval(id);
+        }
+    }
+
+
+
+
+
+
+</script>
+</html>
