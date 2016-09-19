@@ -113,11 +113,11 @@
             cxt.stroke();
             cxt.beginPath();
             cxt.strokeStyle="#ABCDEF";
-            cxt.lineWidth=7;
+            cxt.lineWidth=4;
             cxt.moveTo(playx+20,playy+20);
-            cxt.lineTo(playx+20+gunzic*Math.cos(i+peri*2),350-gunzic+gunzic*Math.sin(0.5*Math.PI-(i+peri*2)));
+            cxt.lineTo(playx+20+gunzic*Math.cos(i+peri),350-gunzic+gunzic*Math.sin(0.5*Math.PI-(i+peri)));
             cxt.stroke();
-                if(i<=0){
+                if(i<=peri*2){
                     clearInterval(id);
                    cxt.strokeStyle="#000000";
             cxt.lineWidth=4;
