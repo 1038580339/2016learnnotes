@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    #bigger{
+    width:500px;
+    height:300px;
+        overflow: hidden;
+float: left;
+    }
+    /*animtion 写法*/
+        #bigger img{
+            width: 500px;
+            height: 300px;
+            transition: 1s;
+        }
+        /*#bigger img:hover{*/
+            /*-webkit-animation: bigger 3s;*/
+        /*}*/
+        /*@-webkit-keyframes  bigger{*/
+            /*from{*/
+                /*-webkit-transform: scale(1,1);*/
+            /*}*/
+            /*to{*/
+                /*-webkit-transform: scale(1.1,1.1);*/
+            /*}*/
+        /*}*/
+        #bigger img:hover{
+            width: 600px;
+            height: 360px;
+        }
+        /*平移写法*/
+        #move{
+            width:500px;
+            height:300px;
+            overflow: hidden;
+            float: left;
+        }
+        #move img{
+            width: 700px;
+            height: 300px;
+        }
+        #move img:hover{
+            -webkit-animation: move 3s;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes move {
+             0%{
+                margin-left: 0px;
+            }
+            50%{
+                margin-left: -200px;
+            }
+            100%{
+                margin-left: 0px;
+            }
+        }
+        /*一个框移动进入图片内*/
+        #moveIn{
+            width:500px;
+            height:300px;
+            overflow: hidden;
+            float: left;
+            display: block;
+        }
+        #moveIn img{
+            width: 500px;
+            height: 300px;
+        }
+        #moveIn div{
+            width: 100px;
+            height: 100px;
+            border: solid black;
+            -webkit-animation: movein 3s;
+            margin-top: -100px;
+           -webkit-animation-iteration-count: infinite;
+            position: absolute;
+
+        }
+
+        @-webkit-keyframes movein {
+            from{
+               margin-top: -100px;
+                -webkit-transform: rotate(0deg);
+                margin-left: 0px;
+            }
+            to{
+                margin-left: 200px;
+               margin-top: 100px;
+                -webkit-transform: rotate(360deg);
+            }
+        }
+       /*缩放*/
+        #small{
+            width: 500px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+        }
+        #small img{
+            width: 500px;
+            height: 300px;
+        }
+        #small img:hover{
+            -webkit-animation: smaller 3s;
+        }
+        @-webkit-keyframes smaller {
+            from{
+                -webkit-transform: scale(1,1);
+            }
+            to{
+                -webkit-transform: scale(0.8,0.8);
+            }
+        }
+        /*出现一排文字*/
+        #showOthers{
+            width: 500px;
+            height: 300px;
+            /*overflow: hidden;*/
+            float: left;
+        }
+        #showOthers img{
+            width: 500px;
+            height: 300px;
+
+        }
+        #showOthers div{
+            width: 500px;
+            height: 0px;
+            border-top-left-radius: 500px 100px ;
+            position: relative;
+            /*margin-top: -50px;*/
+            background-color: white;
+            -webkit-animation: showOthers 3s;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes showOthers {
+            0%{
+                height: 0px;
+                margin-top: 0px;
+            }
+            50%{
+                height: 100px;
+                margin-top: -100px;
+            }
+            100%{
+                height: 0px;
+                margin-top: 0px;
+            }
+        }
+        /*文字依次进入*/
+      #codeGetIn{
+          overflow: hidden;
+          width: 500px;
+          height: 300px;
+          overflow: hidden;
+          float: left;
+      }
+        #codeGetIn img{
+            width: 500px;
+            height: 300px;
+        }
+        #codeGetIn p{
+            /*position: absolute;*/
+            color: white;
+            font-size: 18px;
+            /*margin-top: -220px;*/
+
+        }
+        /*.a1{*/
+           /*margin-top: 150px;*/
+            /*margin-left: -120px;*/
+            /*width: 0;*/
+            /*overflow: hidden;*/
+            /*-webkit-animation: a1 5s;*/
+            /*height: 16px;*/
+        /*}*/
+        /*.a2{*/
+            /*margin-top: 180px;*/
+            /*margin-left: -120px;*/
+            /*width: 0;*/
+            /*overflow: hidden;*/
+        /*}*/
+        /*.a3{*/
+            /*margin-top: 210px;*/
+            /*margin-left: -120px;*/
+            /*width: 0;*/
+            /*overflow: hidden;*/
+        /*}*/
+        .a1{
+            margin-top: -200px;
+            margin-left: -120px;
+            -webkit-animation: a 5s;
+            -webkit-animation-iteration-count: infinite;
+
+        }
+        .a2{
+            -webkit-animation: a 4s;
+            /*margin-top: -220px;*/
+            -webkit-animation-delay: 1s;
+            margin-left: -120px;
+            -webkit-animation-iteration-count: infinite;
+        }
+        .a3{
+            /*margin-top: -200px;*/
+            -webkit-animation: a 3s;
+            -webkit-animation-delay: 2s;
+            margin-left: -120px;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes a {
+            from{
+                margin-left: -120px;
+            }
+            to{
+                margin-left: 50px;
+            }
+        }
+        /*文字变形*/
+        #codeChange{
+            overflow: hidden;
+            width: 500px;
+            height: 300px;
+            /*overflow: hidden;*/
+            float: left;
+        }
+        #codeChange img{
+            width: 500px;
+            height: 300px;
+        }
+        #codeChange p{
+            /*position: absolute;*/
+            color: white;
+            font-size: 18px;
+            color: white;
+            font-size: 18px;
+           -webkit-animation: change 3s;
+            margin-left: 200px;
+            -webkit-animation-iteration-count: infinite;
+
+        }
+        .a4{
+            margin-top: -220px;
+        }
+        @-webkit-keyframes change {
+            from{
+
+            }
+            to{
+                -webkit-transform: skewX(-90deg);
+            }
+        }
+        /*边框变长*/
+        #borderLong{
+            overflow: hidden;
+            width: 500px;
+            height: 300px;
+            /*overflow: hidden;*/
+            float: left;
+        }
+        #borderLong img {
+            width: 500px;
+            height: 300px;
+        }
+        #borderLong div{
+            position: absolute;
+        }
+        #left{
+        height: 0;
+            width: 0;
+            border-left:white solid ;
+            margin-left: 100px;
+            margin-top: 50px;
+            -webkit-animation: height 3s;
+            -webkit-animation-iteration-count: infinite;
+        }
+        #right{
+            height: 0;
+            width: 0;
+            border-left:white solid ;
+            margin-left: 280px;
+            margin-top: 50px;
+            -webkit-animation: height 3s;
+            -webkit-animation-iteration-count: infinite;
+
+        }
+        #top{
+            height: 0;
+            width: 0;
+            border-top:white solid ;
+            margin-left: 90px;
+            margin-top: 60px;
+            -webkit-animation: width 3s;
+            -webkit-animation-iteration-count: infinite;
+        }
+        #bottom{
+            height: 0;
+            width: 0;
+            border-top:white solid ;
+            margin-left: 90px;
+            margin-top: 240px;
+            -webkit-animation: width 3s;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes height {
+            from{
+
+            }
+            to{
+                height: 200px;
+            }
+        }
+        @-webkit-keyframes width {
+            from{
+
+            }
+            to{
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="bigger"><img src="1.jpg"/></div>
+<div id="moveIn">
+    <div></div>
+    <img src="1.jpg"/>
+</div>
+<div id="move"><img src="1.jpg"/></div>
+<div id="small"><img src="1.jpg"/></div>
+<div id="showOthers">
+    <img src="1.jpg"/>
+    <div>
+       <p align="right"> 我是大傻逼</p>
+    </div>
+</div>
+<div id="codeGetIn">
+
+    <img src="1.jpg" style="margin-top: 0px"/>
+    <p class="a1">看到这个酒瓶没</p>
+    <p class="a2">看到了吧</p>
+    <p class="a3">砸死你</p>
+</div>
+<div id="codeChange">
+    <img src="1.jpg" style="margin-top: 0px"/>
+    <p class="a4">看到这个酒瓶没</p>
+    <p class="a">看到了吧</p>
+    <p class="a">砸死你</p>
+</div>
+<div id="borderLong">
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <img src="1.jpg" style="margin-top: 0px"/>
+</div>
+
+</body>
+</html>
