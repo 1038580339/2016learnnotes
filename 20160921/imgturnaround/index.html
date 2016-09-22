@@ -1,0 +1,61 @@
+<HTML>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<style type="text/css">
+
+		#container div{
+			float: left;
+			animation : turnaround 2s linear;
+		}
+		@keyframes turnaround {
+			0%{
+				-webkit-transform: rotateX(0deg) rotateY(0deg);
+			}
+			12.5%{
+				-webkit-transform: rotateX(45deg)  rotateY(45deg);
+			}
+			25%{
+				-webkit-transform: rotateX(90deg)  rotateY(90deg);
+			}
+			37.5%{
+				-webkit-transform: rotateX(135deg)  rotateY(135deg);
+			}
+			50%{
+				-webkit-transform: rotateX(180deg)  rotateY(180deg);
+			}
+			62.5%{
+				-webkit-transform: rotateX(225deg)  rotateY(225deg);
+			}
+			75%{
+				-webkit-transform: rotateX(270deg)  rotateY(270deg);
+			}
+			87.5%{
+				-webkit-transform: rotateX(315deg)  rotateY(315deg);
+			}
+			100%{
+				-webkit-transform: rotateX(360deg)  rotateY(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div id="container"></div>
+
+</body>
+
+	<script>
+		var container = document.getElementById("container");
+		var arr=[];
+		for(var i=0;i<100;i++){
+			arr[i]=document.createElement("div");
+			container.appendChild(arr[i]);
+			arr[i].style.background= "url('4.jpg')";
+			arr[i].style.height="300px";
+			arr[i].style.width="4.5px";
+			arr[i].style.backgroundPosition = i+"%"+i+"%";
+			arr[i].style.animationDelay = i/200+"s";
+		}
+	</script>
+
+</HTML>
