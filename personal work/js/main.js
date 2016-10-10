@@ -72,6 +72,7 @@ $(function () {
             window.location.href="#page7";
             $("#page7-images").css("backgroundImage","url("+goods[3]+")");
             localStorage.setItem("goodsID",goods[0]);
+            $("#page7-goodsId").text(goods[2]);
             console.log(localStorage.getItem("goodID"));
         }
         // div.style.backgroundImage=goods[6];
