@@ -35,6 +35,10 @@
          img=document.createElement("img");
         img.src=dataUrl;
         context2.clearRect(0, 0, 400,400);
+        context2.drawImage(img,0,0);
+        context2.fillstyle="#FFFFFF";
+        context2.globalAlpha=0.5;
+        context2.fillRect(0,0,400,400);
         context2.save();
         context2.beginPath();
         context2.arc(100,100, 100, 0, Math.PI * 2);
@@ -56,6 +60,10 @@
     console.log(e.offsetX);
 
     context2.clearRect(0, 0, 400,400);
+        context2.drawImage(img,0,0);
+        context2.fillstyle="#FFFFFF";
+        context2.globalAlpha=0.5;
+        context2.fillRect(0,0,400,400);
     context2.save();
     context2.beginPath();
         if(e.offsetX==undefined) {
@@ -73,6 +81,11 @@
         var dateUrl2=canvas2.toDataURL();
         img2.src=dateUrl2;
         context3.clearRect(0,0,300,300);
+        context3.save();
+        context3.beginPath();
+        context3.arc(100,100, 100, 0, Math.PI * 2);
+        context3.closePath();
+        context3.clip();
         context3.drawImage(img2,e.offsetX-100,e.offsetY-100,200,200,0,0,300,300);
 
     requestAnimationFrame(render1);
