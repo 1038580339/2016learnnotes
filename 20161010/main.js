@@ -62,7 +62,7 @@
     context2.clearRect(0, 0, 400,400);
         context2.drawImage(img,0,0);
         context2.fillstyle="#FFFFFF";
-        context2.globalAlpha=0.5;
+        context2.globalAlpha=0.7;
         context2.fillRect(0,0,400,400);
     context2.save();
     context2.beginPath();
@@ -86,7 +86,7 @@
         context3.arc(100,100, 100, 0, Math.PI * 2);
         context3.closePath();
         context3.clip();
-        context3.drawImage(img2,e.offsetX-100,e.offsetY-100,200,200,0,0,300,300);
+        context3.drawImage(img2,e.offsetX-100,e.offsetY-100,200,200,0,0,200,200);
 
     requestAnimationFrame(render1);
 }
