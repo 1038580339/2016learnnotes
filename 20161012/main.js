@@ -5,14 +5,17 @@
     var audio=document.getElementById("audio");
     var body=document.body;
     var container=document.getElementById("container");
-    body.addEventListener("dragover",function (e) {
+    container.addEventListener("dragover",function (e) {
         e.preventDefault();
     });
-    body.addEventListener("drop",function (e) {
+    var t=0;
+    container.addEventListener("drop",function (e) {
         e.preventDefault();
+        //console.log(e.dataTransfer.files);
         var files = e.dataTransfer.files;
+       // var name= files[0].name;
         var reader;
-        if (files && files.length) {
+        // if (files && files.length) {
             // var file = files[0];
             //
             // switch (file.type) {
@@ -34,17 +37,37 @@
             //         console.log(file);
             //         break;
             // }
-            for(var i=0;i<files.length;i++){
-                switch (files[i].type){
-                    case "text/plain":
+
+
+
+        // }
+        // for (var i = 0; i < files.length; i++) {
+        //     alert("Drop " + files[i].name.toString());
+        //     uploadFile(file[i]);
+        //     return false;
+        // }
+        //
+
+        if(files&&files.length){
+            var file=files[0];
+                switch (file.type){
+                    case "audio/mp3":
                         reader=new FileReader();
-                        reader.onload=function () {
-                            container.innerHTML=reader.result;
-                            console.log(reader.result.src);
+                        reader.onload=function (e) {
+                            var div=document.createElement("div");
+                            console.log();
+                             audio.src=reader.result;
+                             div.innerText=file.name;
+                            div.style.backgroundColor="blue";
+                            div.onclick=function (e) {
+                                audio.src=reader.result;
+                            };
+                            //text.innerHTML=reader.result.toString();
+                            container.appendChild(div);
                         };
-                        reader.readAsDataURL(files[i]);
+                        reader.readAsDataURL(file);
+                        break;
                 }
-            }
 
         }
     })
