@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="content"></div>
+<script>
+    var content=document.getElementById("content");
+    for(var i=0;i<48;i++){
+        if(i==0||i==10||i==20||i==30||i==40){
+            var h2=document.createElement("h2");""
+            h2.className="team";
+            h2.innerText="第"+(i/10+1)+"组";
+            content.appendChild(h2);
+        }
+        var a=document.createElement("a");
+        var img=document.createElement("img");
+        a.href="main.html?i="+i;
+        img.src="images/image"+i+".jpg";
+        content.appendChild(a);
+        a.appendChild(img);
+    }
+</script>
+</body>
+</html>

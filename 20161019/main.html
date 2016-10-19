@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img" />
+</body>
+<script>
+var url=location.search;
+
+  url=url.split("=");
+  console.log(url[1]);
+    //document.body.appendChild(document.createElement("img").src="images/image"+url[1]+".jpg");
+    var body=document.body;
+    var img=document.getElementById("img");
+    img.src="images/image"+url[1]+".jpg";
+
+</script>
+</html>
