@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <title>Title</title>
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/bootstrap-theme.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+    <style>
+        li{
+            margin-top: 130px;
+            font-size: 22px;
+            padding-left: 30px;
+        }
+        #smallTop{
+            display: none;
+        }
+        #smallBottom{
+            display: none;
+            margin-top: 30px;
+        }
+        #bigBottom .row .col-xs-3{
+             height: 180px;
+            background-color: gainsboro;
+        }
+        #bigBottom{
+            margin-top: 30px;
+        }
+        @media (max-width: 1200px) {
+            li{
+                font-size: 18px;
+                padding-left: 10px;
+            }
+            #smallTop{
+                display: none;
+            }
+
+        }
+        @media (max-width: 900px) {
+            li{
+                font-size: 15px;
+                padding-left: 6px;
+            }
+            #smallTop{
+                display: none;
+            }
+        }
+        @media (max-width: 778px) {
+            #bigTop {
+                display: none;
+            }
+
+            #smallTop {
+                display: block;
+            }
+            #smallBottom{
+                display: block;
+            }
+            #bigBottom{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="bigTop">
+    <div class="row" style="border-bottom: solid #fa7a20; padding-bottom: 20px">
+        <div class="col-sm-3" style="background-color: #fa7a20; height: 200px;color: white">
+               <h1 style="padding-top: 20px">Responsize</h1>
+            <h1>China</h1>
+            <h5>中国响应式网站分享平台</h5>
+        </div>
+        <div class="col-sm-7" style=" height: 200px;">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#">首页</a></li>
+                <li role="presentation"><a href="#">国内</a></li>
+                <li role="presentation"><a href="#">国外</a></li>
+                <li role="presentation"><a href="#">分享</a></li>
+                <li role="presentation"><a href="#">参考</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-2" style="height: 200px;">
+               <p style="text-align: right; font-size: 16px;padding-top: 40px">登陆&nbsp;|&nbsp;注册</p>
+            <img src="images/zhuzi-ad.jpg" class="img-responsive">
+        </div>
+        </div>
+</div>
+<div class="container" id="smallTop" style="border-bottom: solid #fa7a20; padding-bottom: 20px">
+    <div class="row">
+        <div class="col-xs-12" style="background-color: #fa7a20;height: 200px;color: white; text-align: center">
+            <h1 style="padding-top: 20px">Responsize</h1>
+            <h1>China</h1>
+            <h5>中国响应式网站分享平台</h5>
+            </div>
+        </div>
+    <div class="row" style="margin-top: 20px">
+        <div class="col-xs-4">
+            <span class="glyphicon glyphicon-align-justify" style="background-color: #fa7a20; padding: 10px 15px; border-radius: 5px;"></span>
+
+    </div>
+        <div class="col-xs-8">
+            <p style="text-align: right; font-size: 16px;padding-top: 15px">登陆&nbsp;|&nbsp;注册</p>
+            </div>
+        </div>
+    </div>
+       <div class="container">
+           <h2 style="font-weight: bolder">艺斯互动</h2>
+           <div class="row">
+               <div class="col-xs-1"><img src="images/eecc3.png" class="img-responsive"  style="height: 300px;"></div>
+               <div class="col-xs-2"><img src="images/eecc3.png" class="img-responsive" style="height: 300px;"  ></div>
+               <div class="col-xs-4"><img src="images/eecc2.png" class="img-responsive" style="height: 300px;" ></div>
+               <div class="col-xs-5"><img src="images/eecc1.png" class="img-responsive"  style="height: 300px;"></div>
+           </div>
+       </div>
+    <div class="container" id="bigBottom">
+        <div class="row">
+        <div class="col-xs-3">
+            <h3 style="color: #fa7a20">Responsive.cn</h3>
+            <p style="font-size: 8px;">中国响应式网站分享平台</p>
+        </div>
+        <div class="col-xs-3">
+            <h4 style="padding-top: 10px">关于ABOUT</h4>
+            <hr/>
+            <ul class="nav nav-pills nav-stacked" role="tablist" style="margin-top: -150px;">
+                <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">关于我们</a></li>
+                <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">联系我们</a></li>
+                <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">建议</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-3">
+            <h4 style="padding-top: 10px">链接LINKS</h4>
+            <hr/>
+            <ul class="nav nav-pills nav-stacked" role="tablist" style="margin-top: -150px;">
+                <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">友情链接</a></li>
+                <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">合作相关</a></li>
+                <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">网友评价</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-3">
+            <h4 style="padding-top: 10px;font-size: 16px; font-weight:500">推荐RECCOMMEND</h4>
+            <hr/>
+            <img src="images/aliyun.jpg" class="img-responsive">
+        </div>
+            </div>
+    </div>
+<div class="container" id="smallBottom">
+    <h4 style="padding-top: 10px">关于ABOUT</h4>
+    <hr/>
+    <ul class="nav nav-pills nav-stacked" role="tablist" style="margin-top: -150px;">
+        <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">关于我们</a></li>
+        <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">联系我们</a></li>
+        <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">建议</a></li>
+    </ul>
+    <h4 style="padding-top: 10px">链接LINKS</h4>
+    <hr/>
+    <ul class="nav nav-pills nav-stacked" role="tablist" style="margin-top: -150px;">
+        <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">友情链接</a></li>
+        <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">合作相关</a></li>
+        <li role="presentation" style="font-size: 14px; margin-left: -10px;"><a href="#" style="color: inherit">网友评价</a></li>
+    </ul>
+    <h4 style="padding-top: 10px;font-size: 16px; font-weight:500">推荐RECCOMMEND</h4>
+    <hr/>
+    <img src="images/aliyun.jpg" class="img-responsive">
+</div>
+</body>
+</html>

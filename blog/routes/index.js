@@ -9,21 +9,21 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'newdata'
-});
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : '',
+//   database : 'newdata'
+// });
 
-connection.connect();
+// connection.connect();
 
-connection.query("SELECT * from posts where ID='234'", function(err, rows, fields) {
-  if (err) throw err;
+// connection.query("SELECT * from posts where ID='234'", function(err, rows, fields) {
+//   if (err) throw err;
 
   // console.log('The solution is: ', rows[0].ID);
-  res.render("index",rows[0].post_content);
+  //res.render("index",rows[0].post_content);
 
-});
+// });
 
-connection.end();
+// connection.end();
