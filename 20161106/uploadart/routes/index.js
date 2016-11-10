@@ -15,7 +15,7 @@ router.post("/upload",function (req,res) {
   });
   connection.connect();
   
-  connection.query("INSERT INTO content(title,theme,article) VALUES('"+req.body.title+"','"+req.body.theme+"','"+req.body.content+"')",
+  connection.query("INSERT INTO content(title,theme,article) VALUES(?,?,?)",[req.body.title,req.body.theme,req.body.content],
       function(err, rows, fields) {
     if (err) throw err;
    else(res.json({num:2}));
