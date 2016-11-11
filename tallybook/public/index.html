@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td>名字</td>
+        <td>日期</td>
+        <td>金额</td>
+        <td>是否还清</td>
+        <td>清除</td>
+    </tr>
+    </table>
+<form id="form">
+    <label>
+    姓名：
+    <input type="text" name="name" required />
+</label>
+    <br/>
+    <label>
+        日期：
+
+        <input type="text" name="date" required />
+    </label>
+    <br/>
+    <label>
+        欠款：
+        <input type="text" name="number" required />
+    </label>
+    <br/>
+    <label>
+        是否还清：
+        <input type="text" name="yn" required/>
+    </label>
+    <br/>
+    <input type="submit" value="保存" id="submit" />
+</form>
+</body>
+<script src="main.js"></script>
+</html>
